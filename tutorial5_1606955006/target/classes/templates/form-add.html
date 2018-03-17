@@ -2,13 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 <head>
-
+<head th:replace="fragments/fragment :: assets" />
 <title>Add student</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
-
+<div th:replace="fragments/fragment :: header"></div>
+		
 	<h1 class="page-header">Problem Editor</h1>
 
 	<form action="/student/add/submit" method="get">
@@ -26,7 +27,7 @@
 			<button type="submit" name="action" value="save">Save</button>
 		</div>
 	</form>
-
+<div th:replace="fragments/fragment :: footer"></div>
 </body>
 
 </html>
